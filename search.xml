@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>test</title>
+    <url>/2022/04/09/test/</url>
+    <content><![CDATA[]]></content>
+      <tags>
+        <tag>test</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Markdown语法</title>
     <url>/2022/04/06/Markdown%E8%AF%AD%E6%B3%95/</url>
     <content><![CDATA[<h1 id="Markdown语法"><a href="#Markdown语法" class="headerlink" title="Markdown语法"></a>Markdown语法</h1><h3 id="Tricks"><a href="#Tricks" class="headerlink" title="Tricks:"></a>Tricks:</h3><ol>
