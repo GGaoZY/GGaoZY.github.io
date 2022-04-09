@@ -26,6 +26,19 @@
       </tags>
   </entry>
   <entry>
+    <title>更换Hexo博客</title>
+    <url>/2022/04/05/%E6%9B%B4%E6%8D%A2Hexo%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<h1 id="浅谈Hexo"><a href="#浅谈Hexo" class="headerlink" title="浅谈Hexo"></a>浅谈Hexo</h1><h3 id="原因："><a href="#原因：" class="headerlink" title="原因："></a>原因：</h3><p>我以前用的是wordpress，但是他的文章不支持Markdown语法，所以就换了一下，以后写博客就更方便了。</p>
+<p>其实我是喜欢写点东西的，所以我花了几天的时间研究了一下Hexo，今天正式更换啦，欢迎大家来访！</p>
+]]></content>
+      <categories>
+        <category>日常</category>
+      </categories>
+      <tags>
+        <tag>日常</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Markdown语法</title>
     <url>/2022/04/06/Markdown%E8%AF%AD%E6%B3%95/</url>
     <content><![CDATA[<h1 id="Markdown语法"><a href="#Markdown语法" class="headerlink" title="Markdown语法"></a>Markdown语法</h1><h3 id="Tricks"><a href="#Tricks" class="headerlink" title="Tricks:"></a>Tricks:</h3><ol>
@@ -142,19 +155,6 @@
       </categories>
       <tags>
         <tag>Markdown</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>更换Hexo博客</title>
-    <url>/2022/04/05/%E6%9B%B4%E6%8D%A2Hexo%E5%8D%9A%E5%AE%A2/</url>
-    <content><![CDATA[<h1 id="浅谈Hexo"><a href="#浅谈Hexo" class="headerlink" title="浅谈Hexo"></a>浅谈Hexo</h1><h3 id="原因："><a href="#原因：" class="headerlink" title="原因："></a>原因：</h3><p>我以前用的是wordpress，但是他的文章不支持Markdown语法，所以就换了一下，以后写博客就更方便了。</p>
-<p>其实我是喜欢写点东西的，所以我花了几天的时间研究了一下Hexo，今天正式更换啦，欢迎大家来访！</p>
-]]></content>
-      <categories>
-        <category>日常</category>
-      </categories>
-      <tags>
-        <tag>日常</tag>
       </tags>
   </entry>
 </search>
