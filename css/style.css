@@ -5,6 +5,8 @@
 
 }
 
+
+
 /* 鼠标样式 */
 body {
     cursor: url(https://cdn.jsdelivr.net/gh/constown/HexoCustomFile/public/cursors/default.cur),
@@ -15,4 +17,6 @@ img {
     cursor: url(https://cdn.jsdelivr.net/gh/constown/HexoCustomFile/public/cursors/pointer.cur),
     default;
 }
-
+#page-header{
+    background-color: transparent;
+}

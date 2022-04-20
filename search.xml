@@ -133,6 +133,37 @@
       </tags>
   </entry>
   <entry>
+    <title>有关C语言中出现有关scanf报错的处理办法</title>
+    <url>/2022/04/18/%E6%9C%89%E5%85%B3C%E8%AF%AD%E8%A8%80%E4%B8%AD%E5%87%BA%E7%8E%B0%E6%9C%89%E5%85%B3scanf%E6%8A%A5%E9%94%99%E7%9A%84%E5%A4%84%E7%90%86%E5%8A%9E%E6%B3%95/</url>
+    <content><![CDATA[<h3 id="有关C语言中出现有关scanf报错的处理办法"><a href="#有关C语言中出现有关scanf报错的处理办法" class="headerlink" title="有关C语言中出现有关scanf报错的处理办法"></a>有关C语言中出现有关scanf报错的处理办法</h3><p>相信不少小伙伴在初学C语言的过程中，都曾遇见过以下这种报错情况</p>
+<img src="https://cdn.jsdelivr.net/gh/GGaoZY/PicGo/img/202204180204776.png" alt="image-20220418013333796"  />
+
+<p>这是由于，在使用VS的情况下，认为C语言scanf不安全所做出的提醒</p>
+<p>根据报错提示可以看出，它的建议是将scanf 改为scanf_s，但是这种方法修改过后会使这段程序失去了跨平台性</p>
+<p>scanf是C语言提供的</p>
+<p>scanf_s不是标准C语言提供的，是VS编译器提供的</p>
+<p>那么该怎么办呢？</p>
+<p>这边提供一种最简单的的方法就是在程序的第一行加入以下语句</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> _CRT_SECURE_NO_WARNINGS 1</span></span><br></pre></td></tr></table></figure>
+
+<p>但是吧，如果说每次敲代码之前都要先加入一行代码，很费事！</p>
+<p>下面介绍一种方法</p>
+<p>首先找到这个文件</p>
+<p><img src="https://cdn.jsdelivr.net/gh/GGaoZY/PicGo/img/image-20220418014042296.png" alt="image-20220418014042296"></p>
+<p>大体路径是D:\Visual Studio 2022\Common7\IDE\VC\VCProjectItems</p>
+<p>找到这个文件之后，右击选中，然后打开方式选择记事本。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/GGaoZY/PicGo/img/image-20220418014946378.png" alt="image-20220418014946378"></p>
+<p>在记事本中复制#define _CRT_SECURE_NO_WARNINGS 1（直接复制，切忌多打少打空格）</p>
+<p>最后点击保存的时候可能会发现保存不了，大体是说没有权限，访问被拒绝。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/GGaoZY/PicGo/img/29D05A33348F5FB82F496741495B8E04.png" alt="img"></p>
+<p>面对这种情况，直接使用最简单粗暴的方法，将这个文件拖到桌面（！！！重点要记好这个文件的路径！！！）</p>
+<p>再点开输入#define _CRT_SECURE_NO_WARNINGS 1</p>
+<p>这个时候已经可以保存了，接下来将这个文件拖回到原来的路径下就好啦！</p>
+<p>你的VS在每次使用时第一行都会自动有#define_CRT_SECURE_NO_WARNINGS 1，不用再每次写这行代码了，这样在使用scanf函数时就不会报错啦！</p>
+<p>这样一来，问题得以完美解决！</p>
+]]></content>
+  </entry>
+  <entry>
     <title>Markdown语法</title>
     <url>/2022/04/06/Markdown%E8%AF%AD%E6%B3%95/</url>
     <content><![CDATA[<h1 id="Markdown语法"><a href="#Markdown语法" class="headerlink" title="Markdown语法"></a>Markdown语法</h1><h3 id="Tricks"><a href="#Tricks" class="headerlink" title="Tricks:"></a>Tricks:</h3><ol>
@@ -263,36 +294,5 @@
       <tags>
         <tag>日常</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>有关C语言中出现有关scanf报错的处理办法</title>
-    <url>/2022/04/18/%E6%9C%89%E5%85%B3C%E8%AF%AD%E8%A8%80%E4%B8%AD%E5%87%BA%E7%8E%B0%E6%9C%89%E5%85%B3scanf%E6%8A%A5%E9%94%99%E7%9A%84%E5%A4%84%E7%90%86%E5%8A%9E%E6%B3%95/</url>
-    <content><![CDATA[<h3 id="有关C语言中出现有关scanf报错的处理办法"><a href="#有关C语言中出现有关scanf报错的处理办法" class="headerlink" title="有关C语言中出现有关scanf报错的处理办法"></a>有关C语言中出现有关scanf报错的处理办法</h3><p>相信不少小伙伴在初学C语言的过程中，都曾遇见过以下这种报错情况</p>
-<img src="https://cdn.jsdelivr.net/gh/GGaoZY/PicGo/img/202204180204776.png" alt="image-20220418013333796"  />
-
-<p>这是由于，在使用VS的情况下，认为C语言scanf不安全所做出的提醒</p>
-<p>根据报错提示可以看出，它的建议是将scanf 改为scanf_s，但是这种方法修改过后会使这段程序失去了跨平台性</p>
-<p>scanf是C语言提供的</p>
-<p>scanf_s不是标准C语言提供的，是VS编译器提供的</p>
-<p>那么该怎么办呢？</p>
-<p>这边提供一种最简单的的方法就是在程序的第一行加入以下语句</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> _CRT_SECURE_NO_WARNINGS 1</span></span><br></pre></td></tr></table></figure>
-
-<p>但是吧，如果说每次敲代码之前都要先加入一行代码，很费事！</p>
-<p>下面介绍一种方法</p>
-<p>首先找到这个文件</p>
-<p><img src="https://cdn.jsdelivr.net/gh/GGaoZY/PicGo/img/image-20220418014042296.png" alt="image-20220418014042296"></p>
-<p>大体路径是D:\Visual Studio 2022\Common7\IDE\VC\VCProjectItems</p>
-<p>找到这个文件之后，右击选中，然后打开方式选择记事本。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/GGaoZY/PicGo/img/image-20220418014946378.png" alt="image-20220418014946378"></p>
-<p>在记事本中复制#define _CRT_SECURE_NO_WARNINGS 1（直接复制，切忌多打少打空格）</p>
-<p>最后点击保存的时候可能会发现保存不了，大体是说没有权限，访问被拒绝。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/GGaoZY/PicGo/img/29D05A33348F5FB82F496741495B8E04.png" alt="img"></p>
-<p>面对这种情况，直接使用最简单粗暴的方法，将这个文件拖到桌面（！！！重点要记好这个文件的路径！！！）</p>
-<p>再点开输入#define _CRT_SECURE_NO_WARNINGS 1</p>
-<p>这个时候已经可以保存了，接下来将这个文件拖回到原来的路径下就好啦！</p>
-<p>你的VS在每次使用时第一行都会自动有#define_CRT_SECURE_NO_WARNINGS 1，不用再每次写这行代码了，这样在使用scanf函数时就不会报错啦！</p>
-<p>这样一来，问题得以完美解决！</p>
-]]></content>
   </entry>
 </search>
