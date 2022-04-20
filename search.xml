@@ -1,116 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>C语言</title>
-    <url>/2022/04/16/C%E8%AF%AD%E8%A8%80/</url>
-    <content><![CDATA[<h1>C语言</h1>
-
-<h2 id="1-数据类型"><a href="#1-数据类型" class="headerlink" title="1. 数据类型"></a>1. 数据类型</h2><h3 id="1-1-数据类型的使用"><a href="#1-1-数据类型的使用" class="headerlink" title="1.1 数据类型的使用"></a>1.1 数据类型的使用</h3><ul>
-<li><p>char              &#x2F;&#x2F;字符数据类型</p>
-</li>
-<li><p>short            &#x2F;&#x2F;短整型</p>
-</li>
-<li><p>int                 &#x2F;&#x2F;整型</p>
-</li>
-</ul>
-<ul>
-<li><p>long              &#x2F;&#x2F;长整型</p>
-</li>
-<li><p>long long     &#x2F;&#x2F;更长的整型</p>
-</li>
-<li><p>float             &#x2F;&#x2F;单精度浮点数</p>
-</li>
-<li><p>double         &#x2F;&#x2F;双精度浮点数</p>
-</li>
-</ul>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//包含一个叫stdio.h的文件</span></span><br><span class="line"><span class="comment">//std-标准 standard input output</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//main前面的int表示main函数调用返回一个整型值</span></span><br><span class="line"><span class="comment">//int main()//主函数-程序的入口</span></span><br><span class="line"><span class="comment">//&#123;</span></span><br><span class="line"><span class="comment">//	//这里完成任务</span></span><br><span class="line"><span class="comment">//	//在屏幕上输出hello world</span></span><br><span class="line"><span class="comment">//	//函数-printf  f(function)  -printf  -打印函数</span></span><br><span class="line"><span class="comment">//	//库函数-C语言本身提供给我们使用的函数</span></span><br><span class="line"><span class="comment">//	//别人的东西-打招呼</span></span><br><span class="line"><span class="comment">//	//#include</span></span><br><span class="line"><span class="comment">//	printf(&quot;hello world\n&quot;);</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">//	return 0;</span></span><br><span class="line"><span class="comment">//&#125;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//%c——打印字符</span></span><br><span class="line"><span class="comment">//%d——打印整型</span></span><br><span class="line"><span class="comment">//%f——打印浮点数字——打小数</span></span><br><span class="line"><span class="comment">//%p——以地址为形式打印</span></span><br><span class="line"><span class="comment">//%x——打印16进制数字</span></span><br><span class="line"><span class="comment">//%s——打印字符串</span></span><br><span class="line"><span class="comment">//%o...</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="comment">//char——字符类型</span></span><br><span class="line">	<span class="comment">//char ch = &#x27;A&#x27;;//内存</span></span><br><span class="line">	<span class="comment">//printf(&quot;%c\n&quot;, ch);//%c——打印字符格式的数据</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">//short int——短整型</span></span><br><span class="line">	<span class="comment">//int——整型</span></span><br><span class="line">	<span class="comment">//int age = 20;</span></span><br><span class="line">	<span class="comment">//printf(&quot;%d\n&quot;, age);//%d——打印整型十进制数据</span></span><br><span class="line">	</span><br><span class="line">	<span class="comment">//long——长整型</span></span><br><span class="line">	<span class="comment">//long num = 100;</span></span><br><span class="line">	<span class="comment">//printf(&quot;%d\n&quot;, num);</span></span><br><span class="line">	</span><br><span class="line">	<span class="comment">//float——单精度浮点数</span></span><br><span class="line">	<span class="comment">//float f = 5.0;</span></span><br><span class="line">	<span class="comment">//printf(&quot;%f\n&quot;, f);</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">//double——双精度浮点数</span></span><br><span class="line">	<span class="comment">//double d = 3.14;</span></span><br><span class="line">	<span class="comment">//printf(&quot;%lf\n&quot;, d);</span></span><br><span class="line"> </span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="1-2-数据类型的大小"><a href="#1-2-数据类型的大小" class="headerlink" title="1.2 数据类型的大小"></a>1.2 数据类型的大小</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, <span class="keyword">sizeof</span>(<span class="type">char</span>));</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, <span class="keyword">sizeof</span>(<span class="type">short</span>));</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, <span class="keyword">sizeof</span>(<span class="type">int</span>));</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, <span class="keyword">sizeof</span>(<span class="type">long</span>));</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, <span class="keyword">sizeof</span>(<span class="type">long</span> <span class="type">long</span>));</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, <span class="keyword">sizeof</span>(<span class="type">float</span>));</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, <span class="keyword">sizeof</span>(<span class="type">double</span>));</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>字节</p>
-<p>计算机中单位</p>
-<p>bit——比特位</p>
-<p>byte——字节（1byte&#x3D;8bit）</p>
-<p><img src="https://cdn.jsdelivr.net/gh/GGaoZY/PicGo/img/image-20220418000134338.png" alt="image-20220418000134338"></p>
-<p>C语言标准规定    sizeof(long) &gt;&#x3D; sizeof(int)</p>
-<p>​                             (long的大小可以为4个字节也可以为8个字节)</p>
-<h2 id="2-变量"><a href="#2-变量" class="headerlink" title="2. 变量"></a>2. 变量</h2><h3 id="2-1-定义变量的方法"><a href="#2-1-定义变量的方法" class="headerlink" title="2.1 定义变量的方法"></a>2.1 定义变量的方法</h3><p>类型+变量名&#x3D;赋值</p>
-<p>例：int age &#x3D; 150；</p>
-<p>float weight &#x3D; 45.5f;</p>
-<p>char ch &#x3D; ‘W’;</p>
-<h3 id="2-2-变量的分类-局部变量-x2F-全局变量"><a href="#2-2-变量的分类-局部变量-x2F-全局变量" class="headerlink" title="2.2 变量的分类(局部变量&#x2F;全局变量)"></a>2.2 变量的分类(局部变量&#x2F;全局变量)</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> num2 = <span class="number">20</span>;<span class="comment">//全局变量——定义在代码块（&#123;&#125;）外部的变量</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">int</span> num1 = <span class="number">10</span>;<span class="comment">//局部变量——定义在代码块（&#123;&#125;）内部的变量</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>！！！注意点:局部变量只能在局部范围内使用</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> a = <span class="number">20</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">int</span> a = <span class="number">10</span>;</span><br><span class="line">	<span class="comment">//局部变量和全局变量的名字建议不要相同——容易误会，产生bug</span></span><br><span class="line">	<span class="comment">//当局部变量和全局变量的名字相同时，局部变量优先</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, a);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://cdn.jsdelivr.net/gh/GGaoZY/PicGo/img/image-20220418004312640.png" alt="image-20220418004312640"></p>
-<h3 id="2-3-变量的使用"><a href="#2-3-变量的使用" class="headerlink" title="2.3 变量的使用"></a>2.3 变量的使用</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> _CRT_SECURE_NO_WARNINGS 1</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="comment">//计算两个数的和</span></span><br><span class="line">	<span class="type">int</span> num1 = <span class="number">0</span>;</span><br><span class="line">	<span class="type">int</span> num2 = <span class="number">0</span>;</span><br><span class="line">	<span class="type">int</span> sum = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//输入数据——使用输入函数scanf</span></span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>, &amp;num1, &amp;num2);<span class="comment">//取地址符号&amp;</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">//C语言语法规定，变量要定义在当前代码块的最前面</span></span><br><span class="line">	sum = num1 + num2;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;sum = %d\n&quot;</span>, sum);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>！！C语言语法规定，变量要定义在当前代码块的最前面</p>
-<p>控制台输出：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/GGaoZY/PicGo/img/202204180207640.png" alt="image-20220418020751278"></p>
-<h3 id="2-4-变量的作用域和生命周期"><a href="#2-4-变量的作用域和生命周期" class="headerlink" title="2.4 变量的作用域和生命周期"></a>2.4 变量的作用域和生命周期</h3><h4 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h4><p>作用域( scope )，程序设计概念，通常来说，一段程序代码中所用到的名字并不总是有效&#x2F;可用的<br>而限定这个名字的可用性的代码范围就是这个名字的作用域。</p>
-<p><strong>局部变量的作用域是变量所在的局部范围。</strong></p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> _CRT_SECURE_NO_WARNINGS 1</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="comment">//局部变量的作用域</span></span><br><span class="line">	<span class="type">int</span> num = <span class="number">0</span>;</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;num = %d\n&quot;</span>, num);</span><br><span class="line">	&#125;</span><br><span class="line"> </span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<p><strong>全局变量的作用域是整个工程。</strong></p>
-<p>例1：在代码块（{}）外部定义一个变量</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> _CRT_SECURE_NO_WARNINGS 1</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">//全局变量的作用域</span></span><br><span class="line"><span class="type">int</span> global = <span class="number">2022</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, global);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<p>例2：在代码块（{}）外部定义一个变量，定义一个函数，并在主函数里调用（函数这里还没学到，只是测试一下全局变量）</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> _CRT_SECURE_NO_WARNINGS 1</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">//全局变量的作用域</span></span><br><span class="line"><span class="type">int</span> global = <span class="number">2022</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">test</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;test()--%d\n&quot;</span>, global);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	test();</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, global);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://cdn.jsdelivr.net/gh/GGaoZY/PicGo/img/202204192326715.png" alt="image-20220419232602788"></p>
-<p>由此可见全局变量在函数和main函数里都能使用</p>
-<p>例3：在源文件里新建一个.c文件，并在这个.c文件内部定义一个变量（全局变量）</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> _CRT_SECURE_NO_WARNINGS 1</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> g_val = <span class="number">2022</span>;</span><br></pre></td></tr></table></figure>
-
-<p>再回到原来的文件里使用这个变量（注意这里要用extern声明一下外部符号）</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> _CRT_SECURE_NO_WARNINGS 1</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="comment">//未声明的标识符，需声明</span></span><br><span class="line">	<span class="comment">//extern--声明外部符号的</span></span><br><span class="line">	<span class="keyword">extern</span> <span class="type">int</span> g_val;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;g_val = %d\n&quot;</span>, g_val);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://cdn.jsdelivr.net/gh/GGaoZY/PicGo/img/202204192337316.png" alt="image-20220419233749318"></p>
-<p>可以看到这里可以成功使用</p>
-<h4 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h4><p>变量的生命周期指的是变量的创建到变量的销毁之间的一个时间段</p>
-<p><strong>局部变量的生命周期是:进入作用域生命周期开始，出作用域生命周期结束。</strong></p>
-<p><strong>全局变量的生命周期是:整个程序的生命周期。</strong></p>
-<h2 id="3-常量"><a href="#3-常量" class="headerlink" title="3. 常量"></a>3. 常量</h2><p>**C语言中的常量分为以下以下几种: **</p>
-<h4 id="3-1-字面常量"><a href="#3-1-字面常量" class="headerlink" title="3.1 字面常量"></a>3.1 字面常量</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> _CRT_SECURE_NO_WARNINGS 1</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">int</span> num = <span class="number">4</span>;</span><br><span class="line">		<span class="comment">//字面常量</span></span><br><span class="line">		<span class="number">3</span>;</span><br><span class="line">		<span class="number">100</span>;</span><br><span class="line">		<span class="number">3.14</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="3-2-const-修饰的常变量"><a href="#3-2-const-修饰的常变量" class="headerlink" title="3.2 const 修饰的常变量"></a>3.2 const 修饰的常变量</h4><p>引用const之前</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> _CRT_SECURE_NO_WARNINGS 1</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	</span><br><span class="line">	<span class="type">int</span> num = <span class="number">4</span>;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, num);</span><br><span class="line">	num = <span class="number">8</span>;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, num);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://cdn.jsdelivr.net/gh/GGaoZY/PicGo/img/202204200009896.png" alt="image-20220420000903885"></p>
-<p><strong>这里我们可以看到num的值先是4再是8，num的值可以被改变</strong></p>
-<p>引用const之后</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> _CRT_SECURE_NO_WARNINGS 1</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="comment">//const--常属性</span></span><br><span class="line">	<span class="comment">//const修饰的常变量</span></span><br><span class="line">	<span class="type">const</span> <span class="type">int</span> num = <span class="number">4</span>;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, num);</span><br><span class="line">	num = <span class="number">8</span>;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, num);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://cdn.jsdelivr.net/gh/GGaoZY/PicGo/img/202204200011096.png" alt="image-20220420001147703"></p>
-<p><strong>这里我们看到程序报错，显示num的值不可再被改变</strong></p>
-<p>（这里num本质上还是一个变量，但是又有常属性，所以称num为常变量）</p>
-<h4 id="3-3-define定义的标识符常量"><a href="#3-3-define定义的标识符常量" class="headerlink" title="3.3 #define定义的标识符常量"></a>3.3 #define定义的标识符常量</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> _CRT_SECURE_NO_WARNINGS 1</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">//#define定义的标识符常量</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> MAX 10</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">int</span> arr[MAX] = &#123;<span class="number">0</span>&#125;;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, MAX);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://cdn.jsdelivr.net/gh/GGaoZY/PicGo/img/202204200025530.png" alt="image-20220420002459527"></p>
-<h4 id="3-4-枚举常量"><a href="#3-4-枚举常量" class="headerlink" title="3.4 枚举常量"></a>3.4 枚举常量</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> _CRT_SECURE_NO_WARNINGS 1</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">//枚举常量</span></span><br><span class="line"><span class="comment">//枚举——一一列举</span></span><br><span class="line"><span class="comment">//性别：男、女、保密</span></span><br><span class="line"><span class="comment">//三原色：红、绿、蓝</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//枚举关键——enum</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">enum</span> <span class="title">Sex</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	MALE,</span><br><span class="line">	FEMALE,</span><br><span class="line">	SECRET</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">//MALE,FEMALE,SECRET——枚举常量</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="comment">//enum Sex s = FEMALE;</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, MALE);<span class="comment">//0</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, FEMALE);<span class="comment">//1</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, SECRET);<span class="comment">//2</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://cdn.jsdelivr.net/gh/GGaoZY/PicGo/img/202204200039713.png" alt="image-20220420003912840"></p>
-<p>枚举常量是有值的，并且不可被改变，但是通过枚举类型所创造出来的变量可以被改变。</p>
-]]></content>
-      <categories>
-        <category>C语言</category>
-      </categories>
-      <tags>
-        <tag>C语言</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Markdown语法</title>
     <url>/2022/04/06/Markdown%E8%AF%AD%E6%B3%95/</url>
     <content><![CDATA[<h1 id="Markdown语法"><a href="#Markdown语法" class="headerlink" title="Markdown语法"></a>Markdown语法</h1><h3 id="Tricks"><a href="#Tricks" class="headerlink" title="Tricks:"></a>Tricks:</h3><ol>
@@ -230,6 +120,147 @@
       </tags>
   </entry>
   <entry>
+    <title>C语言</title>
+    <url>/2022/04/16/C%E8%AF%AD%E8%A8%80/</url>
+    <content><![CDATA[<h1>C语言</h1>
+
+<h2 id="1-数据类型"><a href="#1-数据类型" class="headerlink" title="1. 数据类型"></a>1. 数据类型</h2><h3 id="1-1-数据类型的使用"><a href="#1-1-数据类型的使用" class="headerlink" title="1.1 数据类型的使用"></a>1.1 数据类型的使用</h3><ul>
+<li><p>char              &#x2F;&#x2F;字符数据类型</p>
+</li>
+<li><p>short            &#x2F;&#x2F;短整型</p>
+</li>
+<li><p>int                 &#x2F;&#x2F;整型</p>
+</li>
+</ul>
+<ul>
+<li><p>long              &#x2F;&#x2F;长整型</p>
+</li>
+<li><p>long long     &#x2F;&#x2F;更长的整型</p>
+</li>
+<li><p>float             &#x2F;&#x2F;单精度浮点数</p>
+</li>
+<li><p>double         &#x2F;&#x2F;双精度浮点数</p>
+</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//包含一个叫stdio.h的文件</span></span><br><span class="line"><span class="comment">//std-标准 standard input output</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//main前面的int表示main函数调用返回一个整型值</span></span><br><span class="line"><span class="comment">//int main()//主函数-程序的入口</span></span><br><span class="line"><span class="comment">//&#123;</span></span><br><span class="line"><span class="comment">//	//这里完成任务</span></span><br><span class="line"><span class="comment">//	//在屏幕上输出hello world</span></span><br><span class="line"><span class="comment">//	//函数-printf  f(function)  -printf  -打印函数</span></span><br><span class="line"><span class="comment">//	//库函数-C语言本身提供给我们使用的函数</span></span><br><span class="line"><span class="comment">//	//别人的东西-打招呼</span></span><br><span class="line"><span class="comment">//	//#include</span></span><br><span class="line"><span class="comment">//	printf(&quot;hello world\n&quot;);</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">//	return 0;</span></span><br><span class="line"><span class="comment">//&#125;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//%c——打印字符</span></span><br><span class="line"><span class="comment">//%d——打印整型</span></span><br><span class="line"><span class="comment">//%f——打印浮点数字——打小数</span></span><br><span class="line"><span class="comment">//%p——以地址为形式打印</span></span><br><span class="line"><span class="comment">//%x——打印16进制数字</span></span><br><span class="line"><span class="comment">//%s——打印字符串</span></span><br><span class="line"><span class="comment">//%o...</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="comment">//char——字符类型</span></span><br><span class="line">	<span class="comment">//char ch = &#x27;A&#x27;;//内存</span></span><br><span class="line">	<span class="comment">//printf(&quot;%c\n&quot;, ch);//%c——打印字符格式的数据</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">//short int——短整型</span></span><br><span class="line">	<span class="comment">//int——整型</span></span><br><span class="line">	<span class="comment">//int age = 20;</span></span><br><span class="line">	<span class="comment">//printf(&quot;%d\n&quot;, age);//%d——打印整型十进制数据</span></span><br><span class="line">	</span><br><span class="line">	<span class="comment">//long——长整型</span></span><br><span class="line">	<span class="comment">//long num = 100;</span></span><br><span class="line">	<span class="comment">//printf(&quot;%d\n&quot;, num);</span></span><br><span class="line">	</span><br><span class="line">	<span class="comment">//float——单精度浮点数</span></span><br><span class="line">	<span class="comment">//float f = 5.0;</span></span><br><span class="line">	<span class="comment">//printf(&quot;%f\n&quot;, f);</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">//double——双精度浮点数</span></span><br><span class="line">	<span class="comment">//double d = 3.14;</span></span><br><span class="line">	<span class="comment">//printf(&quot;%lf\n&quot;, d);</span></span><br><span class="line"> </span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="1-2-数据类型的大小"><a href="#1-2-数据类型的大小" class="headerlink" title="1.2 数据类型的大小"></a>1.2 数据类型的大小</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, <span class="keyword">sizeof</span>(<span class="type">char</span>));</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, <span class="keyword">sizeof</span>(<span class="type">short</span>));</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, <span class="keyword">sizeof</span>(<span class="type">int</span>));</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, <span class="keyword">sizeof</span>(<span class="type">long</span>));</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, <span class="keyword">sizeof</span>(<span class="type">long</span> <span class="type">long</span>));</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, <span class="keyword">sizeof</span>(<span class="type">float</span>));</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, <span class="keyword">sizeof</span>(<span class="type">double</span>));</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>字节</p>
+<p>计算机中单位</p>
+<p>bit——比特位</p>
+<p>byte——字节（1byte&#x3D;8bit）</p>
+<p><img src="https://cdn.jsdelivr.net/gh/GGaoZY/PicGo/img/image-20220418000134338.png" alt="image-20220418000134338"></p>
+<p>C语言标准规定    sizeof(long) &gt;&#x3D; sizeof(int)</p>
+<p>​                             (long的大小可以为4个字节也可以为8个字节)</p>
+<h2 id="2-变量"><a href="#2-变量" class="headerlink" title="2. 变量"></a>2. 变量</h2><h3 id="2-1-定义变量的方法"><a href="#2-1-定义变量的方法" class="headerlink" title="2.1 定义变量的方法"></a>2.1 定义变量的方法</h3><p>类型+变量名&#x3D;赋值</p>
+<p>例：int age &#x3D; 150；</p>
+<p>float weight &#x3D; 45.5f;</p>
+<p>char ch &#x3D; ‘W’;</p>
+<h3 id="2-2-变量的分类-局部变量-x2F-全局变量"><a href="#2-2-变量的分类-局部变量-x2F-全局变量" class="headerlink" title="2.2 变量的分类(局部变量&#x2F;全局变量)"></a>2.2 变量的分类(局部变量&#x2F;全局变量)</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> num2 = <span class="number">20</span>;<span class="comment">//全局变量——定义在代码块（&#123;&#125;）外部的变量</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">int</span> num1 = <span class="number">10</span>;<span class="comment">//局部变量——定义在代码块（&#123;&#125;）内部的变量</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>！！！注意点:局部变量只能在局部范围内使用</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> a = <span class="number">20</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">int</span> a = <span class="number">10</span>;</span><br><span class="line">	<span class="comment">//局部变量和全局变量的名字建议不要相同——容易误会，产生bug</span></span><br><span class="line">	<span class="comment">//当局部变量和全局变量的名字相同时，局部变量优先</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, a);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/GGaoZY/PicGo/img/image-20220418004312640.png" alt="image-20220418004312640"></p>
+<h3 id="2-3-变量的使用"><a href="#2-3-变量的使用" class="headerlink" title="2.3 变量的使用"></a>2.3 变量的使用</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> _CRT_SECURE_NO_WARNINGS 1</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="comment">//计算两个数的和</span></span><br><span class="line">	<span class="type">int</span> num1 = <span class="number">0</span>;</span><br><span class="line">	<span class="type">int</span> num2 = <span class="number">0</span>;</span><br><span class="line">	<span class="type">int</span> sum = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//输入数据——使用输入函数scanf</span></span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>, &amp;num1, &amp;num2);<span class="comment">//取地址符号&amp;</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">//C语言语法规定，变量要定义在当前代码块的最前面</span></span><br><span class="line">	sum = num1 + num2;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;sum = %d\n&quot;</span>, sum);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>！！C语言语法规定，变量要定义在当前代码块的最前面</p>
+<p>控制台输出：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/GGaoZY/PicGo/img/202204180207640.png" alt="image-20220418020751278"></p>
+<h3 id="2-4-变量的作用域和生命周期"><a href="#2-4-变量的作用域和生命周期" class="headerlink" title="2.4 变量的作用域和生命周期"></a>2.4 变量的作用域和生命周期</h3><h4 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h4><p>作用域( scope )，程序设计概念，通常来说，一段程序代码中所用到的名字并不总是有效&#x2F;可用的<br>而限定这个名字的可用性的代码范围就是这个名字的作用域。</p>
+<p><strong>局部变量的作用域是变量所在的局部范围。</strong></p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> _CRT_SECURE_NO_WARNINGS 1</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="comment">//局部变量的作用域</span></span><br><span class="line">	<span class="type">int</span> num = <span class="number">0</span>;</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;num = %d\n&quot;</span>, num);</span><br><span class="line">	&#125;</span><br><span class="line"> </span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>全局变量的作用域是整个工程。</strong></p>
+<p>例1：在代码块（{}）外部定义一个变量</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> _CRT_SECURE_NO_WARNINGS 1</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">//全局变量的作用域</span></span><br><span class="line"><span class="type">int</span> global = <span class="number">2022</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, global);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>例2：在代码块（{}）外部定义一个变量，定义一个函数，并在主函数里调用（函数这里还没学到，只是测试一下全局变量）</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> _CRT_SECURE_NO_WARNINGS 1</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">//全局变量的作用域</span></span><br><span class="line"><span class="type">int</span> global = <span class="number">2022</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">test</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;test()--%d\n&quot;</span>, global);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	test();</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, global);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/GGaoZY/PicGo/img/202204192326715.png" alt="image-20220419232602788"></p>
+<p>由此可见全局变量在函数和main函数里都能使用</p>
+<p>例3：在源文件里新建一个.c文件，并在这个.c文件内部定义一个变量（全局变量）</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> _CRT_SECURE_NO_WARNINGS 1</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> g_val = <span class="number">2022</span>;</span><br></pre></td></tr></table></figure>
+
+<p>再回到原来的文件里使用这个变量（注意这里要用extern声明一下外部符号）</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> _CRT_SECURE_NO_WARNINGS 1</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="comment">//未声明的标识符，需声明</span></span><br><span class="line">	<span class="comment">//extern--声明外部符号的</span></span><br><span class="line">	<span class="keyword">extern</span> <span class="type">int</span> g_val;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;g_val = %d\n&quot;</span>, g_val);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/GGaoZY/PicGo/img/202204192337316.png" alt="image-20220419233749318"></p>
+<p>可以看到这里可以成功使用</p>
+<h4 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h4><p>变量的生命周期指的是变量的创建到变量的销毁之间的一个时间段</p>
+<p><strong>局部变量的生命周期是:进入作用域生命周期开始，出作用域生命周期结束。</strong></p>
+<p><strong>全局变量的生命周期是:整个程序的生命周期。</strong></p>
+<h2 id="3-常量"><a href="#3-常量" class="headerlink" title="3. 常量"></a>3. 常量</h2><p>**C语言中的常量分为以下以下几种: **</p>
+<h4 id="3-1-字面常量"><a href="#3-1-字面常量" class="headerlink" title="3.1 字面常量"></a>3.1 字面常量</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> _CRT_SECURE_NO_WARNINGS 1</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">int</span> num = <span class="number">4</span>;</span><br><span class="line">		<span class="comment">//字面常量</span></span><br><span class="line">		<span class="number">3</span>;</span><br><span class="line">		<span class="number">100</span>;</span><br><span class="line">		<span class="number">3.14</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="3-2-const-修饰的常变量"><a href="#3-2-const-修饰的常变量" class="headerlink" title="3.2 const 修饰的常变量"></a>3.2 const 修饰的常变量</h4><p>引用const之前</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> _CRT_SECURE_NO_WARNINGS 1</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	</span><br><span class="line">	<span class="type">int</span> num = <span class="number">4</span>;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, num);</span><br><span class="line">	num = <span class="number">8</span>;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, num);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/GGaoZY/PicGo/img/202204200009896.png" alt="image-20220420000903885"></p>
+<p><strong>这里我们可以看到num的值先是4再是8，num的值可以被改变</strong></p>
+<p>引用const之后</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> _CRT_SECURE_NO_WARNINGS 1</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="comment">//const--常属性</span></span><br><span class="line">	<span class="comment">//const修饰的常变量</span></span><br><span class="line">	<span class="type">const</span> <span class="type">int</span> num = <span class="number">4</span>;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, num);</span><br><span class="line">	num = <span class="number">8</span>;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, num);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/GGaoZY/PicGo/img/202204200011096.png" alt="image-20220420001147703"></p>
+<p><strong>这里我们看到程序报错，显示num的值不可再被改变</strong></p>
+<p>（这里num本质上还是一个变量，但是又有常属性，所以称num为常变量）</p>
+<h4 id="3-3-define定义的标识符常量"><a href="#3-3-define定义的标识符常量" class="headerlink" title="3.3 #define定义的标识符常量"></a>3.3 #define定义的标识符常量</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> _CRT_SECURE_NO_WARNINGS 1</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">//#define定义的标识符常量</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> MAX 10</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">int</span> arr[MAX] = &#123;<span class="number">0</span>&#125;;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, MAX);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/GGaoZY/PicGo/img/202204200025530.png" alt="image-20220420002459527"></p>
+<h4 id="3-4-枚举常量"><a href="#3-4-枚举常量" class="headerlink" title="3.4 枚举常量"></a>3.4 枚举常量</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> _CRT_SECURE_NO_WARNINGS 1</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">//枚举常量</span></span><br><span class="line"><span class="comment">//枚举——一一列举</span></span><br><span class="line"><span class="comment">//性别：男、女、保密</span></span><br><span class="line"><span class="comment">//三原色：红、绿、蓝</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//枚举关键——enum</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">enum</span> <span class="title">Sex</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	MALE,</span><br><span class="line">	FEMALE,</span><br><span class="line">	SECRET</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">//MALE,FEMALE,SECRET——枚举常量</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="comment">//enum Sex s = FEMALE;</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, MALE);<span class="comment">//0</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, FEMALE);<span class="comment">//1</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, SECRET);<span class="comment">//2</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/GGaoZY/PicGo/img/202204200039713.png" alt="image-20220420003912840"></p>
+<p>枚举常量是有值的，并且不可被改变，但是通过枚举类型所创造出来的变量可以被改变。</p>
+]]></content>
+      <categories>
+        <category>C语言</category>
+      </categories>
+      <tags>
+        <tag>C语言</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>有关C语言中出现有关scanf报错的处理办法</title>
+    <url>/2022/04/18/%E6%9C%89%E5%85%B3C%E8%AF%AD%E8%A8%80%E4%B8%AD%E5%87%BA%E7%8E%B0%E6%9C%89%E5%85%B3scanf%E6%8A%A5%E9%94%99%E7%9A%84%E5%A4%84%E7%90%86%E5%8A%9E%E6%B3%95/</url>
+    <content><![CDATA[<h3 id="有关C语言中出现有关scanf报错的处理办法"><a href="#有关C语言中出现有关scanf报错的处理办法" class="headerlink" title="有关C语言中出现有关scanf报错的处理办法"></a>有关C语言中出现有关scanf报错的处理办法</h3><p>相信不少小伙伴在初学C语言的过程中，都曾遇见过以下这种报错情况</p>
+<img src="https://cdn.jsdelivr.net/gh/GGaoZY/PicGo/img/202204180204776.png" alt="image-20220418013333796"  />
+
+<p>这是由于，在使用VS的情况下，认为C语言scanf不安全所做出的提醒</p>
+<p>根据报错提示可以看出，它的建议是将scanf 改为scanf_s，但是这种方法修改过后会使这段程序失去了跨平台性</p>
+<p>scanf是C语言提供的</p>
+<p>scanf_s不是标准C语言提供的，是VS编译器提供的</p>
+<p>那么该怎么办呢？</p>
+<p>这边提供一种最简单的的方法就是在程序的第一行加入以下语句</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> _CRT_SECURE_NO_WARNINGS 1</span></span><br></pre></td></tr></table></figure>
+
+<p>但是吧，如果说每次敲代码之前都要先加入一行代码，很费事！</p>
+<p>下面介绍一种方法</p>
+<p>首先找到这个文件</p>
+<p><img src="https://cdn.jsdelivr.net/gh/GGaoZY/PicGo/img/image-20220418014042296.png" alt="image-20220418014042296"></p>
+<p>大体路径是D:\Visual Studio 2022\Common7\IDE\VC\VCProjectItems</p>
+<p>找到这个文件之后，右击选中，然后打开方式选择记事本。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/GGaoZY/PicGo/img/image-20220418014946378.png" alt="image-20220418014946378"></p>
+<p>在记事本中复制#define _CRT_SECURE_NO_WARNINGS 1（直接复制，切忌多打少打空格）</p>
+<p>最后点击保存的时候可能会发现保存不了，大体是说没有权限，访问被拒绝。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/GGaoZY/PicGo/img/29D05A33348F5FB82F496741495B8E04.png" alt="img"></p>
+<p>面对这种情况，直接使用最简单粗暴的方法，将这个文件拖到桌面（！！！重点要记好这个文件的路径！！！）</p>
+<p>再点开输入#define _CRT_SECURE_NO_WARNINGS 1</p>
+<p>这个时候已经可以保存了，接下来将这个文件拖回到原来的路径下就好啦！</p>
+<p>你的VS在每次使用时第一行都会自动有#define_CRT_SECURE_NO_WARNINGS 1，不用再每次写这行代码了，这样在使用scanf函数时就不会报错啦！</p>
+<p>这样一来，问题得以完美解决！</p>
+]]></content>
+  </entry>
+  <entry>
     <title>Java爬取南通大学教务系统信息</title>
     <url>/2022/04/05/Java%E7%88%AC%E5%8F%96%E5%8D%97%E9%80%9A%E5%A4%A7%E5%AD%A6%E6%95%99%E5%8A%A1%E7%B3%BB%E7%BB%9F%E4%BF%A1%E6%81%AF/</url>
     <content><![CDATA[<h3 id="Java爬取南通大学教务系统信息"><a href="#Java爬取南通大学教务系统信息" class="headerlink" title="Java爬取南通大学教务系统信息"></a>Java爬取南通大学教务系统信息</h3><p>注意：useragent等响应头（爬教务系统好像不需要）</p>
@@ -266,36 +297,5 @@
       <tags>
         <tag>日常</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>有关C语言中出现有关scanf报错的处理办法</title>
-    <url>/2022/04/18/%E6%9C%89%E5%85%B3C%E8%AF%AD%E8%A8%80%E4%B8%AD%E5%87%BA%E7%8E%B0%E6%9C%89%E5%85%B3scanf%E6%8A%A5%E9%94%99%E7%9A%84%E5%A4%84%E7%90%86%E5%8A%9E%E6%B3%95/</url>
-    <content><![CDATA[<h3 id="有关C语言中出现有关scanf报错的处理办法"><a href="#有关C语言中出现有关scanf报错的处理办法" class="headerlink" title="有关C语言中出现有关scanf报错的处理办法"></a>有关C语言中出现有关scanf报错的处理办法</h3><p>相信不少小伙伴在初学C语言的过程中，都曾遇见过以下这种报错情况</p>
-<img src="https://cdn.jsdelivr.net/gh/GGaoZY/PicGo/img/202204180204776.png" alt="image-20220418013333796"  />
-
-<p>这是由于，在使用VS的情况下，认为C语言scanf不安全所做出的提醒</p>
-<p>根据报错提示可以看出，它的建议是将scanf 改为scanf_s，但是这种方法修改过后会使这段程序失去了跨平台性</p>
-<p>scanf是C语言提供的</p>
-<p>scanf_s不是标准C语言提供的，是VS编译器提供的</p>
-<p>那么该怎么办呢？</p>
-<p>这边提供一种最简单的的方法就是在程序的第一行加入以下语句</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> _CRT_SECURE_NO_WARNINGS 1</span></span><br></pre></td></tr></table></figure>
-
-<p>但是吧，如果说每次敲代码之前都要先加入一行代码，很费事！</p>
-<p>下面介绍一种方法</p>
-<p>首先找到这个文件</p>
-<p><img src="https://cdn.jsdelivr.net/gh/GGaoZY/PicGo/img/image-20220418014042296.png" alt="image-20220418014042296"></p>
-<p>大体路径是D:\Visual Studio 2022\Common7\IDE\VC\VCProjectItems</p>
-<p>找到这个文件之后，右击选中，然后打开方式选择记事本。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/GGaoZY/PicGo/img/image-20220418014946378.png" alt="image-20220418014946378"></p>
-<p>在记事本中复制#define _CRT_SECURE_NO_WARNINGS 1（直接复制，切忌多打少打空格）</p>
-<p>最后点击保存的时候可能会发现保存不了，大体是说没有权限，访问被拒绝。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/GGaoZY/PicGo/img/29D05A33348F5FB82F496741495B8E04.png" alt="img"></p>
-<p>面对这种情况，直接使用最简单粗暴的方法，将这个文件拖到桌面（！！！重点要记好这个文件的路径！！！）</p>
-<p>再点开输入#define _CRT_SECURE_NO_WARNINGS 1</p>
-<p>这个时候已经可以保存了，接下来将这个文件拖回到原来的路径下就好啦！</p>
-<p>你的VS在每次使用时第一行都会自动有#define_CRT_SECURE_NO_WARNINGS 1，不用再每次写这行代码了，这样在使用scanf函数时就不会报错啦！</p>
-<p>这样一来，问题得以完美解决！</p>
-]]></content>
   </entry>
 </search>
