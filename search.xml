@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Java爬取南通大学教务系统信息</title>
+    <url>/2022/04/05/Java%E7%88%AC%E5%8F%96%E5%8D%97%E9%80%9A%E5%A4%A7%E5%AD%A6%E6%95%99%E5%8A%A1%E7%B3%BB%E7%BB%9F%E4%BF%A1%E6%81%AF/</url>
+    <content><![CDATA[<h3 id="Java爬取南通大学教务系统信息"><a href="#Java爬取南通大学教务系统信息" class="headerlink" title="Java爬取南通大学教务系统信息"></a>Java爬取南通大学教务系统信息</h3><p>注意：useragent等响应头（爬教务系统好像不需要）</p>
+<p>1、通过抓包获取学校的认证登录链接</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">http://authserver.ntu.edu.cn/authserver/login?service=http://tdjw.ntu.edu.cn/sso/jziotlogin</span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
+
+<p>2、第一次发送get请求获取页面，并且解析，找到需要携带登录的参数，如lt 秘钥等等</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;execution=e1s1, password=+MwHdbut9wc6hIxuq3XG1lHcqFjyJOUBHfuXZFB7p/sJc6SSAp0V0eRJPRg8BWPiU+cEmP8qnlQfyH7HR6iJvxKexFDXTIpnsJ+J23cmWjI=, _eventId=submit, lt=LT-623944-hbUqGmrk6OuO0jPj6mBcmPWseDuCPq1641653523202-LqSD-cas, username=1930141729, dllt=userNamePasswordLogin, rmShown=1&#125;</span><br></pre></td></tr></table></figure>
+
+<p>3、第二次发送请求，带着需要的参数如学号密码等 发送post请求 如果登录成功会跳转，先阻止跳转，查看请求码是否是302  如果都满足的话就获取他的重定向的链接 并且获取此次请求的cookie 这里很重要！</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;CASTGC=TGT-168457-amNCEJXhYIBJHAyI6T3rJCf4xh6l4m61UrbxCZajiIJj9kJYxG1641653717838-EIf3-cas, CASPRIVACY=, iPlanetDirectoryPro=xKdAcvwicaUnfNzcyTRg9e&#125;</span><br></pre></td></tr></table></figure>
+
+<p>4、带着第二次请求的cookie去请求成绩的接口就行 这里也有一些参数 需要自己去爬取</p>
+<p>成绩接口：<a href="http://tdjw.ntu.edu.cn/jwglxt/cjcx/cjcx_cxXsgrcj.html?doType=query&amp;gnmkdm=N305005">http://tdjw.ntu.edu.cn/jwglxt/cjcx/cjcx_cxXsgrcj.html?doType=query&amp;gnmkdm=N305005</a></p>
+]]></content>
+      <categories>
+        <category>爬虫</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C语言</title>
     <url>/2022/04/16/C%E8%AF%AD%E8%A8%80/</url>
     <content><![CDATA[<h1>第1节-初识C语言</h1>
@@ -287,13 +312,11 @@
 <p><img src="https://cdn.jsdelivr.net/gh/GGaoZY/PicGo/img/202204271501688.png" alt="image-20220427150103766"></p>
 <hr>
 <h2 id="10-操作符"><a href="#10-操作符" class="headerlink" title="10. 操作符"></a>10. 操作符</h2><p>这里先做简单介绍</p>
-<p><strong>算术操作符</strong></p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">+  -  *  /  %</span><br></pre></td></tr></table></figure>
+<h3 id="10-1-算术操作符"><a href="#10-1-算术操作符" class="headerlink" title="10.1 算术操作符"></a>10.1 算术操作符</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line">+  -  *  /  %</span><br></pre></td></tr></table></figure>
 
 
 
-<p><strong>移位操作符</strong></p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">&gt;&gt;  &lt;&lt;</span><br></pre></td></tr></table></figure>
+<h3 id="10-2-移位操作符"><a href="#10-2-移位操作符" class="headerlink" title="10.2 移位操作符"></a>10.2 移位操作符</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line">&gt;&gt;  &lt;&lt;</span><br></pre></td></tr></table></figure>
 
 <p>例子：</p>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="comment">//移（2进制）位操作符</span></span><br><span class="line">	<span class="comment">// &lt;&lt;左移</span></span><br><span class="line">	<span class="comment">// &gt;&gt;右移</span></span><br><span class="line">	<span class="type">int</span> a = <span class="number">1</span>;</span><br><span class="line">	<span class="comment">//整型1占4个字节-32bit位</span></span><br><span class="line">	<span class="comment">//00000000000000000000000000000001</span></span><br><span class="line">	<span class="type">int</span> b = a &lt;&lt; <span class="number">2</span>;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, b);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, a);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -301,8 +324,7 @@
 <p>控制台输出：</p>
 <p><img src="https://cdn.jsdelivr.net/gh/GGaoZY/PicGo/img/202204271840285.png" alt="image-20220427184011778"></p>
 <p>这里解释一下，移位运算符表示的是该数的二进制数向左移（&lt;&lt;)，或者右移（&gt;&gt;)几位的符号，但是原来的数保持不变。</p>
-<p><strong>位操作符</strong></p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">&amp;  ^  |</span><br></pre></td></tr></table></figure>
+<h3 id="10-3-位操作符"><a href="#10-3-位操作符" class="headerlink" title="10.3 位操作符"></a>10.3 位操作符</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line">&amp;  ^  |</span><br></pre></td></tr></table></figure>
 
 <ul>
 <li><p>按位与（&amp;）</p>
@@ -327,15 +349,13 @@
 <p><img src="https://cdn.jsdelivr.net/gh/GGaoZY/PicGo/img/202204272142365.png" alt="image-20220427214243033"></p>
 </li>
 </ul>
-<p><strong>赋值操作符</strong></p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">=  +=  -=  *=  /=  &amp;=  ^=  |=  &gt;&gt;=  &lt;&lt;=</span><br></pre></td></tr></table></figure>
+<h3 id="10-4-赋值操作符"><a href="#10-4-赋值操作符" class="headerlink" title="10.4 赋值操作符"></a>10.4 赋值操作符</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line">=  +=  -=  *=  /=  &amp;=  ^=  |=  &gt;&gt;=  &lt;&lt;=</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">int</span> a = <span class="number">10</span>;</span><br><span class="line">	a = <span class="number">20</span>;<span class="comment">// = 赋值     == 判断相等</span></span><br><span class="line">	a = a + <span class="number">10</span>;</span><br><span class="line">	a += <span class="number">10</span>;</span><br><span class="line">	a = a - <span class="number">10</span>;</span><br><span class="line">	a -= <span class="number">10</span>;</span><br><span class="line">	a = a &amp; <span class="number">10</span>;</span><br><span class="line">	a &amp;= <span class="number">10</span>;</span><br><span class="line">	<span class="comment">//复合运算符</span></span><br><span class="line">	<span class="comment">//=  +=  -=  *=  /=  &amp;=  ^=  |=  &gt;&gt;=  &lt;&lt;=</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
 
-<p><strong>单目操作符</strong></p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">!            逻辑反操作</span><br><span class="line">-            负值</span><br><span class="line">+            正值</span><br><span class="line">&amp;            取地址</span><br><span class="line"><span class="keyword">sizeof</span>       操作数的类型长度（以字节为单位）</span><br><span class="line">~            对一个数的二进制按位取反</span><br><span class="line">--           前置、后置--</span><br><span class="line">++           前置、后置++</span><br><span class="line">*            间接访问操作符(解引用操作符)</span><br><span class="line">(类型)        强制类型转换</span><br></pre></td></tr></table></figure>
+<h3 id="10-5-单目操作符"><a href="#10-5-单目操作符" class="headerlink" title="10.5 单目操作符"></a>10.5 单目操作符</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line">!            逻辑反操作</span><br><span class="line">-            负值</span><br><span class="line">+            正值</span><br><span class="line">&amp;            取地址</span><br><span class="line"><span class="keyword">sizeof</span>       操作数的类型长度（以字节为单位）</span><br><span class="line">~            对一个数的二进制按位取反</span><br><span class="line">--           前置、后置--</span><br><span class="line">++           前置、后置++</span><br><span class="line">*            间接访问操作符(解引用操作符)</span><br><span class="line">(类型)        强制类型转换</span><br></pre></td></tr></table></figure>
 
 
 
@@ -344,7 +364,7 @@
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="comment">//C语言里表示真假</span></span><br><span class="line">	<span class="comment">//0—假</span></span><br><span class="line">	<span class="comment">//非0—真</span></span><br><span class="line">	<span class="type">int</span> a = <span class="number">10</span>;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, a);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, !a);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>控制台输出：</p>
-<p><img src="C:\Users\Administrator.DESKTOP-HB5E992\AppData\Roaming\Typora\typora-user-images\image-20220427220158038.png" alt="image-20220427220158038"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/GGaoZY/PicGo/img/202204272245588.png" alt="image-20220427220158038"></p>
 <p>例2：sizeof       操作数的类型长度（以字节为单位）</p>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">int</span> a = <span class="number">10</span>;</span><br><span class="line">	<span class="comment">//sizeof 计算的是变量/类型所占空间的大小，单位是字节。</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, <span class="keyword">sizeof</span>(a));</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, <span class="keyword">sizeof</span>(<span class="type">int</span>));</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, <span class="keyword">sizeof</span> a);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -359,44 +379,6 @@
       </categories>
       <tags>
         <tag>C语言</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java爬取南通大学教务系统信息</title>
-    <url>/2022/04/05/Java%E7%88%AC%E5%8F%96%E5%8D%97%E9%80%9A%E5%A4%A7%E5%AD%A6%E6%95%99%E5%8A%A1%E7%B3%BB%E7%BB%9F%E4%BF%A1%E6%81%AF/</url>
-    <content><![CDATA[<h3 id="Java爬取南通大学教务系统信息"><a href="#Java爬取南通大学教务系统信息" class="headerlink" title="Java爬取南通大学教务系统信息"></a>Java爬取南通大学教务系统信息</h3><p>注意：useragent等响应头（爬教务系统好像不需要）</p>
-<p>1、通过抓包获取学校的认证登录链接</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">http://authserver.ntu.edu.cn/authserver/login?service=http://tdjw.ntu.edu.cn/sso/jziotlogin</span><br></pre></td></tr></table></figure>
-
-<span id="more"></span>
-
-<p>2、第一次发送get请求获取页面，并且解析，找到需要携带登录的参数，如lt 秘钥等等</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;execution=e1s1, password=+MwHdbut9wc6hIxuq3XG1lHcqFjyJOUBHfuXZFB7p/sJc6SSAp0V0eRJPRg8BWPiU+cEmP8qnlQfyH7HR6iJvxKexFDXTIpnsJ+J23cmWjI=, _eventId=submit, lt=LT-623944-hbUqGmrk6OuO0jPj6mBcmPWseDuCPq1641653523202-LqSD-cas, username=1930141729, dllt=userNamePasswordLogin, rmShown=1&#125;</span><br></pre></td></tr></table></figure>
-
-<p>3、第二次发送请求，带着需要的参数如学号密码等 发送post请求 如果登录成功会跳转，先阻止跳转，查看请求码是否是302  如果都满足的话就获取他的重定向的链接 并且获取此次请求的cookie 这里很重要！</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;CASTGC=TGT-168457-amNCEJXhYIBJHAyI6T3rJCf4xh6l4m61UrbxCZajiIJj9kJYxG1641653717838-EIf3-cas, CASPRIVACY=, iPlanetDirectoryPro=xKdAcvwicaUnfNzcyTRg9e&#125;</span><br></pre></td></tr></table></figure>
-
-<p>4、带着第二次请求的cookie去请求成绩的接口就行 这里也有一些参数 需要自己去爬取</p>
-<p>成绩接口：<a href="http://tdjw.ntu.edu.cn/jwglxt/cjcx/cjcx_cxXsgrcj.html?doType=query&amp;gnmkdm=N305005">http://tdjw.ntu.edu.cn/jwglxt/cjcx/cjcx_cxXsgrcj.html?doType=query&amp;gnmkdm=N305005</a></p>
-]]></content>
-      <categories>
-        <category>爬虫</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>更换Hexo博客</title>
-    <url>/2022/04/05/%E6%9B%B4%E6%8D%A2Hexo%E5%8D%9A%E5%AE%A2/</url>
-    <content><![CDATA[<h1 id="浅谈Hexo"><a href="#浅谈Hexo" class="headerlink" title="浅谈Hexo"></a>浅谈Hexo</h1><h3 id="原因："><a href="#原因：" class="headerlink" title="原因："></a>原因：</h3><p>我以前用的是wordpress，但是他的文章不支持Markdown语法，所以就换了一下，以后写博客就更方便了。</p>
-<p>其实我是喜欢写点东西的，所以我花了几天的时间研究了一下Hexo，今天正式更换啦，欢迎大家来访！</p>
-]]></content>
-      <categories>
-        <category>日常</category>
-      </categories>
-      <tags>
-        <tag>日常</tag>
       </tags>
   </entry>
   <entry>
@@ -532,6 +514,19 @@
 ]]></content>
       <tags>
         <tag>C语言</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>更换Hexo博客</title>
+    <url>/2022/04/05/%E6%9B%B4%E6%8D%A2Hexo%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<h1 id="浅谈Hexo"><a href="#浅谈Hexo" class="headerlink" title="浅谈Hexo"></a>浅谈Hexo</h1><h3 id="原因："><a href="#原因：" class="headerlink" title="原因："></a>原因：</h3><p>我以前用的是wordpress，但是他的文章不支持Markdown语法，所以就换了一下，以后写博客就更方便了。</p>
+<p>其实我是喜欢写点东西的，所以我花了几天的时间研究了一下Hexo，今天正式更换啦，欢迎大家来访！</p>
+]]></content>
+      <categories>
+        <category>日常</category>
+      </categories>
+      <tags>
+        <tag>日常</tag>
       </tags>
   </entry>
   <entry>
