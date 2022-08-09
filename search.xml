@@ -382,6 +382,22 @@
       </tags>
   </entry>
   <entry>
+    <title>VS2022里strlen需要引用的头文件</title>
+    <url>/2022/04/21/VS2022%E9%87%8Cstrlen%E9%9C%80%E8%A6%81%E5%BA%94%E5%BC%95%E7%94%A8%E7%9A%84%E5%A4%B4%E6%96%87%E4%BB%B6/</url>
+    <content><![CDATA[<h1 id="VS2022里strlen需要引用的头文件"><a href="#VS2022里strlen需要引用的头文件" class="headerlink" title="VS2022里strlen需要引用的头文件"></a>VS2022里strlen需要引用的头文件</h1><p>今天用VS平台学习C语言，需要计算字符串长度的时候，发现strlen（arr1），跑不起来，提示E0020错误。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/GGaoZY/PicGo/img/202204210010164.png" alt="image-20220421000959945"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/GGaoZY/PicGo/img/202204210010947.png" alt="image-20220421001013761"></p>
+<p>经过查找，发现需要引用另一个头文件。</p>
+<p>&#x2F;&#x2F;#include &lt;string.h&gt;</p>
+<p><img src="https://cdn.jsdelivr.net/gh/GGaoZY/PicGo/img/202204210010100.png" alt="image-20220421001055606"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/GGaoZY/PicGo/img/202204210011146.png" alt="image-20220421001121626"></p>
+<p>问题解决，代码成功运行，以此记录。</p>
+]]></content>
+      <tags>
+        <tag>C语言</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Markdown语法</title>
     <url>/2022/04/06/Markdown%E8%AF%AD%E6%B3%95/</url>
     <content><![CDATA[<h1 id="Markdown语法"><a href="#Markdown语法" class="headerlink" title="Markdown语法"></a>Markdown语法</h1><h3 id="Tricks"><a href="#Tricks" class="headerlink" title="Tricks:"></a>Tricks:</h3><ol>
@@ -498,22 +514,6 @@
       </categories>
       <tags>
         <tag>Markdown</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>VS2022里strlen需要引用的头文件</title>
-    <url>/2022/04/21/VS2022%E9%87%8Cstrlen%E9%9C%80%E8%A6%81%E5%BA%94%E5%BC%95%E7%94%A8%E7%9A%84%E5%A4%B4%E6%96%87%E4%BB%B6/</url>
-    <content><![CDATA[<h1 id="VS2022里strlen需要引用的头文件"><a href="#VS2022里strlen需要引用的头文件" class="headerlink" title="VS2022里strlen需要引用的头文件"></a>VS2022里strlen需要引用的头文件</h1><p>今天用VS平台学习C语言，需要计算字符串长度的时候，发现strlen（arr1），跑不起来，提示E0020错误。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/GGaoZY/PicGo/img/202204210010164.png" alt="image-20220421000959945"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/GGaoZY/PicGo/img/202204210010947.png" alt="image-20220421001013761"></p>
-<p>经过查找，发现需要引用另一个头文件。</p>
-<p>&#x2F;&#x2F;#include &lt;string.h&gt;</p>
-<p><img src="https://cdn.jsdelivr.net/gh/GGaoZY/PicGo/img/202204210010100.png" alt="image-20220421001055606"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/GGaoZY/PicGo/img/202204210011146.png" alt="image-20220421001121626"></p>
-<p>问题解决，代码成功运行，以此记录。</p>
-]]></content>
-      <tags>
-        <tag>C语言</tag>
       </tags>
   </entry>
   <entry>
